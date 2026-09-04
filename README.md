@@ -1,2 +1,2 @@
-# clairn
-A web app hosted on AWS for automating security questionnaire workflows using AI.
+# Clairn
+A three-tier web app hosted entirely on AWS for automating security questionnaire workflows using AI.
