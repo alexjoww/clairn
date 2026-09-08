@@ -6,6 +6,10 @@
   --text-muted: #5d5d57;
   --accent: #2f5d50;
   --accent-hover: #26493f;
+  --danger: #8c2f22;
+  --danger-surface: #fdf1ee;
+  --notice: #2f5d50;
+  --notice-surface: #eef4f1;
 }
 
 *,
@@ -124,7 +128,7 @@ body {
   font-size: 1.0625rem;
 }
 
-/* Sign-in card */
+/* Auth cards */
 
 .card {
   width: 100%;
@@ -293,4 +297,52 @@ body {
   .dashboardBackdrop {
     transition: none;
   }
+}
+
+/* Auth */
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.buttonSecondary {
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--text-muted);
+}
+
+.buttonSecondary:hover {
+  background: var(--background);
+  color: var(--text);
+}
+
+.card .buttonSecondary {
+  margin-top: 0.625rem;
+}
+
+.cardIntro {
+  margin: -1rem 0 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+}
+
+.error,
+.notice {
+  margin: 1.25rem 0 0;
+  padding: 0.625rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.error {
+  background: var(--danger-surface);
+  color: var(--danger);
+}
+
+.notice {
+  background: var(--notice-surface);
+  color: var(--notice);
 }

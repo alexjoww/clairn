@@ -1,14 +1,19 @@
 import Link from 'next/link';
-import Header from '../components/Header';
+import Header from '@/components/Header';
 
 export default function Home() {
   return (
     <div className="page">
       <Header
         action={
-          <Link href="/signin" className="button">
-            Sign in
-          </Link>
+          <div className="headerActions">
+            <Link href="/signin" className="headerLink">
+              Sign in
+            </Link>
+            <Link href="/signup" className="button">
+              Sign up
+            </Link>
+          </div>
         }
       />
       <main className="main">
