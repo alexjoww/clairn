@@ -197,3 +197,100 @@ body {
     padding: 1.5rem;
   }
 }
+
+/* Dashboard */
+
+.dashboardMain {
+  min-height: 100vh;
+}
+
+.dashboardToggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.625rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.dashboardToggleBar {
+  display: block;
+  height: 1.5px;
+  border-radius: 1px;
+  background: var(--text);
+}
+
+.dashboardBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  padding: 0;
+  border: none;
+  background: rgba(28, 28, 26, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  cursor: default;
+  transition: opacity 220ms ease;
+}
+
+.dashboardBackdropOpen {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dashboardPanel {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  width: 15rem;
+  max-width: 80vw;
+  padding: 4.5rem 0.75rem 1rem;
+  border-right: 1px solid var(--border);
+  background: var(--surface);
+  transform: translateX(-100%);
+  transition: transform 220ms ease;
+}
+
+.dashboardPanelOpen {
+  transform: translateX(0);
+}
+
+.dashboardNav {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboardNavItem {
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 6px;
+  background: none;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dashboardNavItem:hover {
+  background: var(--background);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dashboardPanel,
+  .dashboardBackdrop {
+    transition: none;
+  }
+}
